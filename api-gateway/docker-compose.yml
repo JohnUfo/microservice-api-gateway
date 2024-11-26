@@ -28,17 +28,3 @@ services:
       - ./docker/keycloak/realms/:/opt/keycloak/data/import/
     depends_on:
       - keycloak-mysql
-  loki:
-    image: grafana/loki:main
-    command: [ '-config.file=/etc/loki/local-config.yaml' ]
-    ports:
-      - '3100:3100'
-  prometheus:
-    image: prom/prometheus:v2.46.0
-    command:
-      - --enable-feature=exemplar-storage
-      - --config.file=/etc/prometheus/prometheus.yml
-    volumes:
-      - "C:/Users/m1lym/IdeaProjects/microservice-api-gateway/api-gateway/docker/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml"
-    ports:
-      - '9090:9090'
