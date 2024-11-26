@@ -1,4 +1,4 @@
-package com.microservices.product.config;
+package com.api_gateway.gateway.config;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.micrometer.observation.aop.ObservedAspect;
